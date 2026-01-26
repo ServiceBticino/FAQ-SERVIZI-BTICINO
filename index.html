@@ -3,181 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ – SERVIZI BTICINO</title>
+  <title>FAQ – Servizi Bticino</title>
 
   <style>
     :root{
-      --bt-orange: #ff6a00;
-      --bt-black: #0f0f10;
-      --bt-white: #ffffff;
-      --bg: #f4f5f7;
-      --card-border: rgba(15,15,16,.10);
+      --bt-orange:#ff6a00;
+      --bt-black:#0f0f10;
+      --bt-white:#ffffff;
+      --bg:#f4f5f7;
+      --border: rgba(15,15,16,.12);
       --shadow: 0 12px 34px rgba(15,15,16,.10);
       --radius: 16px;
       --muted: rgba(15,15,16,.70);
     }
-
     *{box-sizing:border-box}
-    body{
-      font-family: Arial, sans-serif;
-      margin:0;
-      background: var(--bg);
-      color: var(--bt-black);
-    }
+    body{font-family:Arial,sans-serif;margin:0;background:var(--bg);color:var(--bt-black);}
 
-    /* ===== TOP BAR (BIANCO + LOGO) ===== */
     header.topbar{
-      background: #ffffff;
-      color: #111;
-      padding: 14px 24px;
-      border-bottom: 6px solid var(--bt-orange);
+      background:#fff;
+      padding:14px 24px;
+      border-bottom:6px solid var(--bt-orange);
     }
-
     .brand{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      max-width: 1160px;
-      margin: 0 auto;
+      max-width:1160px;margin:0 auto;
+      display:flex;align-items:center;gap:18px;
     }
+    .logo{height:46px;width:auto;display:block}
+    .titles h1{margin:0 0 2px 0;font-size:22px;font-weight:800}
+    .titles p{margin:0;font-size:13px;opacity:.92}
 
-    .logo{
-      height: 46px;
-      width: auto;
-      display:block;
-    }
-
-    .titles h1{
-      margin:0 0 2px 0;
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: .2px;
-    }
-    .titles p{
-      margin:0;
-      font-size: 13px;
-      opacity: .92;
-    }
-
-    /* ===== LAYOUT ===== */
-    .wrap{
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 22px 18px 40px;
-    }
-
-    .hero{
-      background: var(--bt-white);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-
-    .hero h2{
-      margin:0 0 6px 0;
-      font-size: 18px;
-    }
-    .hero p{
-      margin:0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
+    .wrap{max-width:1160px;margin:0 auto;padding:22px 18px 40px;}
     .card{
-      background: var(--bt-white);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-      min-height: 160px;
+      background:#fff;border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:18px;
     }
-
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
     .tag{
-      display:inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255,106,0,.10);
-      border: 1px solid rgba(255,106,0,.35);
-      color: #111;
-      width: fit-content;
+      display:inline-block;font-size:12px;font-weight:700;
+      padding:6px 10px;border-radius:999px;
+      background:rgba(255,106,0,.10);border:1px solid rgba(255,106,0,.35);
+      width:fit-content;
     }
+    .card h3{margin:10px 0 0 0;font-size:18px;font-weight:800}
+    .card p{margin:8px 0 0 0;color:var(--muted);font-size:13px;line-height:1.45}
 
-    .card h3{
-      margin: 0;
-      font-size: 18px;
-      font-weight: 800;
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:12px;text-decoration:none;
+      font-weight:800;border:0;cursor:pointer;
+      background:var(--bt-orange);color:#111;
+      transition:transform .08s ease, filter .15s ease;
+      min-width:240px;
     }
-
-    .card p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-      flex: 1;
+    .btn:hover{filter:brightness(1.02)}
+    .btn:active{transform:translateY(1px)}
+    .btn.secondary{
+      background:transparent;border:1px solid rgba(15,15,16,.18);color:var(--bt-black);
+      min-width:auto;
     }
-
-    .btnrow{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items:center;
-    }
-
-    a.btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration:none;
-      font-weight: 800;
-      cursor:pointer;
-      border: 0;
-      background: var(--bt-orange);
-      color: #111;
-      transition: transform .08s ease, filter .15s ease;
-      min-width: 210px;
-    }
-    a.btn:hover{ filter: brightness(1.02); }
-    a.btn:active{ transform: translateY(1px); }
-
-    a.btn.secondary{
-      background: transparent;
-      border: 1px solid rgba(15,15,16,.18);
-      color: var(--bt-black);
-    }
-    a.btn.secondary:hover{
+    .btn.secondary:hover{
       border-color: rgba(255,106,0,.65);
       box-shadow: 0 0 0 3px rgba(255,106,0,.12);
     }
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 
-    .footer{
-      margin-top: 14px;
-      color: rgba(15,15,16,.55);
-      font-size: 12px;
-      text-align:center;
+    /* Viewer */
+    #viewerWrap{
+      margin-top:16px;
+      display:none;
+    }
+    .viewerTop{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;flex-wrap:wrap;margin-bottom:10px;
+    }
+    .viewerTitle{
+      font-weight:800;
+    }
+    iframe{
+      width:100%;
+      height: calc(100vh - 220px);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
     }
 
     @media (max-width: 900px){
-      .grid{ grid-template-columns: 1fr; }
-      .logo{ height: 40px; }
-      .titles h1{ font-size: 20px; }
-      a.btn{ width: 100%; min-width: unset; }
+      .grid{grid-template-columns:1fr;}
+      .logo{height:40px;}
+      .titles h1{font-size:20px;}
+      .btn{width:100%;min-width:unset;}
+      iframe{height: calc(100vh - 260px);}
     }
   </style>
 </head>
@@ -185,57 +101,85 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <!-- Metti lo stesso logo che usi nelle altre pagine -->
       <img src="BT_Service.jpg" alt="BTicino Servizi" class="logo">
       <div class="titles">
-        <h1>FAQ – Home</h1>
-        <p>Seleziona l’area FAQ che vuoi consultare.</p>
+        <h1>FAQ – Seleziona area</h1>
+        <p>Scegli la FAQ da consultare. Rimani sempre su questa pagina.</p>
       </div>
     </div>
   </header>
 
   <div class="wrap">
-    <div class="hero">
-      <h2>Seleziona una FAQ</h2>
-      <p>
-        Scegli qui sotto il servizio per cui hai bisogno di chiarimenti: un click e vai alla FAQ corretta.
-      </p>
-    </div>
 
-    <div class="grid">
+    <!-- HOME (scelta) -->
+    <div id="homeWrap">
       <div class="card">
-        <span class="tag">Connettività IoT</span>
-        <h3>FAQ Sicuri e Connessi</h3>
-        <p>
-          Domande e risposte su router/SIM, rinnovo, garanzia dispositivi connessi, gestione servizio e invio richieste.
-        </p>
-        <div class="btnrow">
-          <!-- LINK 1: Sicuri e Connessi -->
-          <a class="btn" href="https://servicebticino.github.io/sicuri-e-connessi-faq/" target="_blank" rel="noopener">
-            Apri FAQ Sicuri e Connessi →
-          </a>
+        <div style="font-weight:800;font-size:18px;">Seleziona una FAQ</div>
+        <div style="margin-top:6px;color:var(--muted);font-size:13px;line-height:1.45;">
+          Clicca un pulsante: la FAQ si aprirà qui sotto. Per tornare alla scelta usa “Home”.
         </div>
       </div>
 
-      <div class="card">
-        <span class="tag">Videocitofonia</span>
-        <h3>FAQ Videocitofonia</h3>
-        <p>
-          Estensione di Garanzia (BT-4390) e Garanzia KASKO (BT-KASKO13V): coperture, esclusioni, casi tipici e confronto.
-        </p>
-        <div class="btnrow">
-          <!-- LINK 2: Videocitofonia
-               Se il tuo URL è diverso, cambia SOLO questa riga. -->
-          <a class="btn" href="https://servicebticino.github.io/FAQ_Estensioni_Garanzia_Videocitofonia/" target="_blank" rel="noopener">
-            Apri FAQ Videocitofonia →
-          </a>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Connettività IoT</span>
+          <h3>FAQ Sicuri e Connessi</h3>
+          <p>Router/SIM, rinnovo, garanzia dispositivi connessi, gestione servizio e invio richieste.</p>
+          <div class="btnrow">
+            <button class="btn" type="button" onclick="openFaq('Sicuri e Connessi', URL_SICURI)">
+              Apri FAQ Sicuri e Connessi →
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="tag">Videocitofonia</span>
+          <h3>FAQ Videocitofonia</h3>
+          <p>Estensione Garanzia (BT-4390) e KASKO (BT-KASKO13V): coperture, esclusioni, casi e confronto.</p>
+          <div class="btnrow">
+            <button class="btn" type="button" onclick="openFaq('Videocitofonia', URL_VIDEO)">
+              Apri FAQ Videocitofonia →
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="footer">
-      BTicino Servizi – Home FAQ (GitHub Pages)
+    <!-- VIEWER (iframe) -->
+    <div id="viewerWrap" class="card">
+      <div class="viewerTop">
+        <div class="viewerTitle" id="viewerTitle">FAQ</div>
+        <button class="btn secondary" type="button" onclick="goHome()">← Home</button>
+      </div>
+      <iframe id="faqFrame" src="" loading="lazy" referrerpolicy="no-referrer"></iframe>
     </div>
+
   </div>
+
+  <script>
+    // 🔧 METTI QUI I DUE URL REALI
+    const URL_SICURI = "https://servicebticino.github.io/sicuri-e-connessi-faq/";
+    const URL_VIDEO  = "https://servicebticino.github.io/FAQ_Estensioni_Garanzia_Videocitofonia/";
+
+    const homeWrap = document.getElementById("homeWrap");
+    const viewerWrap = document.getElementById("viewerWrap");
+    const faqFrame = document.getElementById("faqFrame");
+    const viewerTitle = document.getElementById("viewerTitle");
+
+    function openFaq(title, url){
+      viewerTitle.textContent = "FAQ – " + title;
+      faqFrame.src = url;
+      homeWrap.style.display = "none";
+      viewerWrap.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function goHome(){
+      faqFrame.src = "";
+      viewerWrap.style.display = "none";
+      homeWrap.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
