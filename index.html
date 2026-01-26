@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ – Home</title>
+
+  <style>
+    :root{
+      --bt-orange: #ff6a00;
+      --bt-black: #0f0f10;
+      --bt-white: #ffffff;
+      --bg: #f4f5f7;
+      --card-border: rgba(15,15,16,.10);
+      --shadow: 0 12px 34px rgba(15,15,16,.10);
+      --radius: 16px;
+      --muted: rgba(15,15,16,.70);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background: var(--bg);
+      color: var(--bt-black);
+    }
+
+    /* ===== TOP BAR (BIANCO + LOGO) ===== */
+    header.topbar{
+      background: #ffffff;
+      color: #111;
+      padding: 14px 24px;
+      border-bottom: 6px solid var(--bt-orange);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .logo{
+      height: 46px;
+      width: auto;
+      display:block;
+    }
+
+    .titles h1{
+      margin:0 0 2px 0;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .titles p{
+      margin:0;
+      font-size: 13px;
+      opacity: .92;
+    }
+
+    /* ===== LAYOUT ===== */
+    .wrap{
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 22px 18px 40px;
+    }
+
+    .hero{
+      background: var(--bt-white);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .hero h2{
+      margin:0 0 6px 0;
+      font-size: 18px;
+    }
+    .hero p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: var(--bt-white);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      min-height: 160px;
+    }
+
+    .tag{
+      display:inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,106,0,.10);
+      border: 1px solid rgba(255,106,0,.35);
+      color: #111;
+      width: fit-content;
+    }
+
+    .card h3{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      flex: 1;
+    }
+
+    .btnrow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 800;
+      cursor:pointer;
+      border: 0;
+      background: var(--bt-orange);
+      color: #111;
+      transition: transform .08s ease, filter .15s ease;
+      min-width: 210px;
+    }
+    a.btn:hover{ filter: brightness(1.02); }
+    a.btn:active{ transform: translateY(1px); }
+
+    a.btn.secondary{
+      background: transparent;
+      border: 1px solid rgba(15,15,16,.18);
+      color: var(--bt-black);
+    }
+    a.btn.secondary:hover{
+      border-color: rgba(255,106,0,.65);
+      box-shadow: 0 0 0 3px rgba(255,106,0,.12);
+    }
+
+    .footer{
+      margin-top: 14px;
+      color: rgba(15,15,16,.55);
+      font-size: 12px;
+      text-align:center;
+    }
+
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+      .logo{ height: 40px; }
+      .titles h1{ font-size: 20px; }
+      a.btn{ width: 100%; min-width: unset; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <!-- Metti lo stesso logo che usi nelle altre pagine -->
+      <img src="BT_Service.jpg" alt="BTicino Servizi" class="logo">
+      <div class="titles">
+        <h1>FAQ – Home</h1>
+        <p>Seleziona l’area FAQ che vuoi consultare.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="hero">
+      <h2>Seleziona una FAQ</h2>
+      <p>
+        Questa pagina è il punto di ingresso unico per i colleghi: un click e vai alla FAQ corretta.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Connettività IoT</span>
+        <h3>FAQ Sicuri e Connessi</h3>
+        <p>
+          Domande e risposte su router/SIM, rinnovo, garanzia dispositivi connessi, gestione servizio e invio richieste.
+        </p>
+        <div class="btnrow">
+          <!-- LINK 1: Sicuri e Connessi -->
+          <a class="btn" href="https://servicecbticino.github.io/sicuri-e-connessi-faq/" target="_blank" rel="noopener">
+            Apri FAQ Sicuri e Connessi →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Videocitofonia</span>
+        <h3>FAQ Videocitofonia</h3>
+        <p>
+          Estensione di Garanzia (BT-4390) e Garanzia KASKO (BT-KASKO13V): coperture, esclusioni, casi tipici e confronto.
+        </p>
+        <div class="btnrow">
+          <!-- LINK 2: Videocitofonia
+               Se il tuo URL è diverso, cambia SOLO questa riga. -->
+          <a class="btn" href="https://servicecbticino.github.io/FAQ_Estensioni_Garanzia_Videocitofonia/" target="_blank" rel="noopener">
+            Apri FAQ Videocitofonia →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      BTicino Servizi – Home FAQ (GitHub Pages)
+    </div>
+  </div>
+</body>
+</html>
