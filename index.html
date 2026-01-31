@@ -142,6 +142,19 @@
             </button>
           </div>
         </div>
+
+        <!-- ✅ NUOVA CARD: QMC -->
+        <div class="card">
+          <span class="tag">Estensione Garanzia</span>
+          <h3>FAQ Estensione Garanzia QMC</h3>
+          <p>Domande e procedure relative all’estensione garanzia QMC (codice servizio, requisiti, validità, supporto).</p>
+          <div class="btnrow">
+            <button class="btn" type="button" onclick="openFaq('Estensione Garanzia QMC', URL_QMC)">
+              Apri FAQ Estensione Garanzia QMC →
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -157,9 +170,13 @@
   </div>
 
   <script>
-    // 🔧 METTI QUI I DUE URL REALI
+    // 🔧 METTI QUI GLI URL REALI
     const URL_SICURI = "https://servicebticino.github.io/sicuri-e-connessi-faq/";
     const URL_VIDEO  = "https://servicebticino.github.io/FAQ_Estensioni_Garanzia_Videocitofonia/";
+
+    // ✅ QMC: SOSTITUISCI CON L’URL ESATTO DELLA TUA PAGINA QMC
+    // Esempio tipico: https://servicebticino.github.io/Estensione-Garanzia-QMC/
+    const URL_QMC   = "https://servicebticino.github.io/Estensione-Garanzia-QMC/";
 
     const homeWrap = document.getElementById("homeWrap");
     const viewerWrap = document.getElementById("viewerWrap");
